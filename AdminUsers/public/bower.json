@@ -1,0 +1,25 @@
+{
+  "name": "AdminUsers",
+  "version": "0.0.1",
+  "authors": [
+    "Jose Angel Mendez Santiago <jamsmendez02@gmail.com>"
+  ],
+  "description": "Front-End de AdminUsers",
+  "main": "main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1",
+    "swig": "~1.4.2",
+    "bootstrap-material-design": "~0.1.5",
+    "lokijs": "*",
+    "underscore": "~1.7.0"
+  }
+}
