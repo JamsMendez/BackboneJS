@@ -1,21 +1,10 @@
-var App = {};
+var Backbone    = require('backbone'),
+    Loki        = require('lokijs'),
+    $           = require('jquery');
 
-//$(document).on('ready', function () {
-  App.DB     = {};
-  App.Models = {};
-  App.Views  = {};
+Backbone.$  = $;
+Backbone.DB = { db: new Loki('databse.db') };
 
-  App.DB.db = new loki('databse.db');
-  App.DB.users = App.DB.db.addCollection('users');
+$(function () {
 
-//});
-var model
-setTimeout(function () {
-  model = new App.Models.User();
-  model.set({ username: 'JamsMendez', first_name: 'Jose Angel', last_name: 'Mendez Santiago' })
-  var user = model.save();
-  model.set(user);
-
-  console.log(model.toJSON());
-
-}, 1500);
+});

@@ -1,5 +1,8 @@
-App.Models.User = Backbone.Model.extend({
-  url: '/api/v1/users/',
+var Backbone = require('backbone');
+var DB       = Backbone.DB;
+
+module.exports = Backbone.Model.extend({
+  url: 'URL',
 
   idAttribute: "_id",
 
@@ -38,13 +41,13 @@ App.Models.User = Backbone.Model.extend({
     var response = { status: 400, message: '' };
     if(this.isNew()){
       var model = this.toJSON();
-      var user = App.DB.users.insert(model);
+      var user = DB.users.insert(model);
       if(user){
         response = { status: 200, user: user };
         return response;
       }
     }else{
-      
+
     }
   },
 
@@ -52,7 +55,7 @@ App.Models.User = Backbone.Model.extend({
     var response = { status: 400, message: '' };
     var id = this.idAttribute;
     if(this.has(id)){
-      var user = App.DB.users.get(this.get(id));
+      var user = DB.users.get(this.get(id));
       if(user){
         response = { status: 200, user: user };
         return response;

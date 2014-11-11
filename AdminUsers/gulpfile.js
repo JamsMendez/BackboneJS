@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var connect     = require('gulp-connect');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 
